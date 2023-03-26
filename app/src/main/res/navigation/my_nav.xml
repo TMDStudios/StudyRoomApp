@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.tmdstudios.studyroom.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_blanksFragment"
+            app:destination="@id/blanksFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_regularIrregularFragment"
+            app:destination="@id/regularIrregularFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_conjugationFragment"
+            app:destination="@id/conjugationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.tmdstudios.studyroom.LeaderboardFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" >
+        <action
+            android:id="@+id/action_leaderboardFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mistakeFragment"
+        android:name="com.tmdstudios.studyroom.MistakeFragment"
+        android:label="fragment_mistake"
+        tools:layout="@layout/fragment_mistake" />
+    <fragment
+        android:id="@+id/blanksFragment"
+        android:name="com.tmdstudios.studyroom.BlanksFragment"
+        android:label="fragment_blanks"
+        tools:layout="@layout/fragment_blanks" >
+        <action
+            android:id="@+id/action_blanksFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_blanksFragment_to_mistakeFragment"
+            app:destination="@id/mistakeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regularIrregularFragment"
+        android:name="com.tmdstudios.studyroom.RegularIrregularFragment"
+        android:label="fragment_regular_irregular"
+        tools:layout="@layout/fragment_regular_irregular" >
+        <action
+            android:id="@+id/action_regularIrregularFragment_to_mistakeFragment"
+            app:destination="@id/mistakeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conjugationFragment"
+        android:name="com.tmdstudios.studyroom.ConjugationFragment"
+        android:label="fragment_conjugation"
+        tools:layout="@layout/fragment_conjugation" >
+        <action
+            android:id="@+id/action_conjugationFragment_to_mistakeFragment"
+            app:destination="@id/mistakeFragment" />
+    </fragment>
+</navigation>
